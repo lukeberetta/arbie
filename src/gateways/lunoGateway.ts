@@ -4,7 +4,7 @@ import { Currency } from "../enums/Currency";
 import { IExchangeGateway } from "../interfaces/IExchangeGateway";
 import { ILogger } from "../interfaces/ILogger";
 import { Ticker } from "../interfaces/Ticker";
-const request = require("request");
+import request from "request";
 
 export class LunoGatway implements IExchangeGateway {
 
