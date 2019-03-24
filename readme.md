@@ -1,6 +1,6 @@
-# Arbie
-Arbitrage volatility bot. 
+# Arbie :robot:
+Arbitrage volatility bot By Luke Beretta.
 
 ---
 
-#### By Luke Beretta. This repository and any related files are confidential. Arbie is private property of Davnic ©
+#### Copyright © Davnic - All Rights Reserved. Unauthorized copying of this repository or any files and/or code within, via any medium is strictly prohibited.
