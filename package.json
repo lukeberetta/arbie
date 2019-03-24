@@ -1,0 +1,36 @@
+{
+  "name": "arbie",
+  "version": "1.0.0",
+  "description": "cool",
+  "main": "src/app.ts",
+  "scripts": {
+    "ts:lint": "tslint --project tsconfig.json",
+    "ts:compile": "tsc --project tsconfig.json",
+    "cp:modules": "cp -r node_modules/ bin/node_modules",
+    "cp:staticfiles": "cp src/engine/templates/email.hbs bin/engine/email.hbs",
+    "cp:all": "npm run cp:modules && npm run cp:staticfiles",
+    "build": "npm run ts:lint && npm run ts:compile && npm run cp:all",
+    "start": "npm run build && node bin/app.js"
+  },
+  "author": "Davnic",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/handlebars": "^4.0.37",
+    "@types/mailgun-js": "^0.16.0",
+    "@types/node": "^9.6.5",
+    "@types/ws": "^4.0.2",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "@types/winston": "^2.3.9",
+    "handlebars": "^4.0.11",
+    "mailgun-js": "^0.18.0",
+    "moment": "^2.22.1",
+    "npm": "^5.8.0",
+    "request": "^2.85.0",
+    "winston": "^2.4.2",
+    "winston-papertrail": "^1.0.5",
+    "ws": "^5.1.1"
+  }
+}

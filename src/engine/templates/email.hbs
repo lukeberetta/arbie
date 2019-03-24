@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+    * {
+      color: #272727;
+    }
+
+    body {
+      padding: 40px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    table {
+      border: none;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    td {
+      padding: 15px;
+      font-weight: bold;
+      background-color: #e6e6e6;
+      border-radius: 4px;
+    }
+
+    hr {
+      opacity: .4;
+    }
+
+    #buy {
+      color: green;
+    }
+
+    #sell {
+      color: red;
+    }
+
+    span {
+      opacity: 0.6;
+    }
+
+    .dim {
+      color: #9c9c9c
+    }
+  </style>
+
+</head>
+
+<body style="text-align: center">
+
+  <!-- Header -->
+  <div>
+    <h1>Arbie 👾 Update</h1>
+    <h2>Latest Arbitrage Summary:</h2>
+    <br>
+    <hr>
+  </div>
+
+  <!-- For Loop -->
+  {{#arr}}
+  <div>
+    <br>
+    <h2>{{BuyExchange}}
+      <span id="buy">{{BuySymbol}}</span>
+      👉 {{SellExchange}}
+      <span id="sell">{{SellSymbol}}</span>
+    </h2>
+    <h5 class="dim">
+      1 BTC =
+      <span id="buy">{{BuySymbol}}{{FormatAPrice}}</span> /
+      <span id="sell">{{SellSymbol}}{{FormatBPrice}}</span>
+    </h5>
+    <br>
+    <table>
+      <tbody>
+        <tr>
+          <td>💸</td>
+          <td> {{SellExchange}} Maker</td>
+          <td> {{SellExchange}} Taker</td>
+        </tr>
+        <tr>
+          <td>{{BuyExchange}} Maker</td>
+          <td>{{MakerMakerWithCreditFee}}%
+            <span class="dim">({{MakerMaker}}%)</span>
+          </td>
+          <td>{{MakerTakerWithCreditFee}}%
+            <span class="dim">({{MakerTaker}}%)</span>
+          </td>
+        </tr>
+        <tr>
+          <td>{{BuyExchange}} Taker</td>
+          <td>{{TakerMakerWithCreditFee}}%
+            <span class="dim">({{TakerMaker}}%)</span>
+          </td>
+          <td>{{TakerTakerWithCreditFee}}%
+            <span class="dim">({{TakerTaker}}%)</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <h3>Static fees apply:
+      <span id="sell"> R{{StaticFees}}</span>
+    </h3>
+    <h5>
+      <span class="dim">*Arbitrage without credit card deposit fee.</span>
+    </h5>
+    <br>
+    <hr>
+    <br>
+  </div>
+  {{/arr}}
+
+  <!-- Footer -->
+
+  <div>
+    <h4>Arbie 👾 by Davnic © 2018
+      <h4>
+        <h6>This email and any files transmitted with it are confidential. Arbie is private property of Davnic ©</h6>
+  </div>
+
+</body>
+
+</html>
